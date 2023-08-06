@@ -34,6 +34,7 @@ resource "aws_s3_object" "index" {
     key    = "index.html"
     source = "index.html"
     acl    = "public-read"
+    etag = filemd5("index.html")
     content_type = "text/html"
 
     depends_on = [ aws_s3_bucket_acl.example ]
@@ -44,6 +45,7 @@ resource "aws_s3_object" "index-css" {
     key    = "index.css"
     source = "index.css"
     acl    = "public-read"
+    etag = filemd5("index.css")
     content_type = "text/css"
 
     depends_on = [ aws_s3_bucket_acl.example ]
@@ -54,6 +56,7 @@ resource "aws_s3_object" "error" {
     key    = "error.html"
     source = "error.html"
     acl    = "public-read"
+    etag = filemd5("error.html")
     content_type = "text/html"
 
     depends_on = [ aws_s3_bucket_acl.example ]
