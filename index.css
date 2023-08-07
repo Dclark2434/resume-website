@@ -11,7 +11,6 @@ body {
     line-height: 1.5;
     margin: 0;
     height: 100vh;
-   /* overflow: hidden; /* Prevent scroll caused by centered content exceeding viewport height */
 }
 
 .container {
@@ -85,6 +84,7 @@ h4 {
     font-size: 1.1em;
     margin-top: 10px;
     color: #000000;
+    margin-right: 10px; 
 }
 
 p, li {
@@ -115,4 +115,34 @@ footer p {
         margin: 10px;
         padding: 10px;
     }
+}
+
+.job-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline; 
+    margin-bottom: 10px; 
+}
+
+.job-date {
+    white-space: nowrap;
+    font-weight: bold; 
+}
+
+.education-entry {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center; 
+}
+
+.education-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.education-date {
+    white-space: nowrap; 
+    font-weight: bold;
+    align-self: flex-start; 
 }
