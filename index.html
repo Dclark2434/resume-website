@@ -95,44 +95,47 @@
         <p>Developed a responsive, serverless, cloud-hosted personal resume website leveraging AWS services and Terraform infrastructure as code practices.</p>
     
         <h4>Key Achievements & Technologies Used:</h4>
-        <ul>
-            <li>
-                <strong>Website Development:</strong>
+        <p><strong>Website Development:</strong></p>
+            <ul>
+                <li>Designed and developed a responsive website using HTML and CSS to ensure compatibility across desktop and mobile platforms.</li>
+                <li>Optimized site performance and layout adjustments, troubleshooting display issues particularly for mobile viewing.</li>
+            </ul>
+        <p><strong>Cloud Infrastructure:</strong></p>
+            <ul>
+                <li>Provisioned and managed cloud resources using Terraform to maintain a version-controlled infrastructure.</li>
+                <li>Utilized Amazon S3 for static website hosting, ensuring secure and scalable storage of website assets.</li>
+                <li>Implemented Amazon CloudFront as a CDN to accelerate content delivery and added SSL/TLS for enhanced security.</li>
+                <li>Configured custom domain integration for a personalized website URL, leveraging Route 53 for DNS management.</li>
+            </ul>
+        <p><strong>Continuous Deployment:</strong></p>
+            <ul>
+                <li>Automated the deployment pipeline to streamline updates and maintain site consistency.</li>
+                <li>Utilized filemd5 function in Terraform to detect changes in static assets, ensuring updated content gets uploaded to S3 when modified.</li>
+            </ul>
+        <p><strong>Logging & Monitoring:</strong></p>
+            <ul>
+                <li>Analyzed CloudFront access logs to troubleshoot and rectify HTTP 403 errors.</li>
+                <li>Enhanced user experience by ensuring rapid content delivery and site uptime.</li>
+            </ul>
+        <p><strong>Best Practices & Optimization:</strong></p>
+            <ul>
+                <li>Incorporated infrastructure best practices, including the use of alternate domain names in CloudFront and adjusting S3 bucket policies to align with CloudFront distributions.</li>
+            </ul>
+            <h4>Ongoing Enhancements & Future Directions:</h4>
+            <p><strong>Visitor Counter Integration:</strong></p>
+            <ul>
+                <li>Currently working on implementing a dynamic visitor counter to the website, leveraging AWS Lambda for serverless computing and DynamoDB for scalable and low-latency data storage.</li>
+            </ul>
+        
+            <p><strong>Efficient Deployment Pipeline:</strong></p>
+            <ul>
+                <li>In pursuit of streamlined and automated deployments, transitioning to GitLab CI/CD.</li>
                 <ul>
-                    <li>Designed and developed a responsive website using HTML and CSS to ensure compatibility across desktop and mobile platforms.</li>
-                    <li>Optimized site performance and layout adjustments, troubleshooting display issues particularly for mobile viewing.</li>
+                    <li>Utilizing Python scripts to convert .docx resume to HTML.</li>
+                    <li>Automating the upload process of static assets to Amazon S3.</li>
+                    <li>Implementing automatic CloudFront invalidation to ensure content freshness and minimize the time between content updates on the website.</li>
                 </ul>
-            </li>
-            <li>
-                <strong>Cloud Infrastructure:</strong>
-                <ul>
-                    <li>Provisioned and managed cloud resources using Terraform to maintain a version-controlled infrastructure.</li>
-                    <li>Utilized Amazon S3 for static website hosting, ensuring secure and scalable storage of website assets.</li>
-                    <li>Implemented Amazon CloudFront as a CDN to accelerate content delivery and added SSL/TLS for enhanced security.</li>
-                    <li>Configured custom domain integration for a personalized website URL, leveraging Route 53 for DNS management.</li>
-                </ul>
-            </li>
-            <li>
-                <strong>Continuous Deployment:</strong>
-                <ul>
-                    <li>Automated the deployment pipeline to streamline updates and maintain site consistency.</li>
-                    <li>Utilized filemd5 function in Terraform to detect changes in static assets, ensuring updated content gets uploaded to S3 when modified.</li>
-                </ul>
-            </li>
-            <li>
-                <strong>Logging & Monitoring:</strong>
-                <ul>
-                    <li>Analyzed CloudFront access logs to troubleshoot and rectify HTTP 403 errors.</li>
-                    <li>Enhanced user experience by ensuring rapid content delivery and site uptime.</li>
-                </ul>
-            </li>
-            <li>
-                <strong>Best Practices & Optimization:</strong>
-                <ul>
-                    <li>Incorporated infrastructure best practices, including the use of alternate domain names in CloudFront and adjusting S3 bucket policies to align with CloudFront distributions.</li>
-                </ul>
-            </li>
-        </ul>
+            </ul>
     </section>
 
     <footer>
