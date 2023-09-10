@@ -1,7 +1,9 @@
+# TODO: update variable and resource names to be consistent style. Mixed case or snake case and stick to it.  This is what you get for trying to learn multiple languages...
 resource "aws_s3_bucket" "resumeWebsiteBucket" {
-  bucket = var.bucketName # "your-bucket-name" TODO: update variable and resource names to be consistent style.  This is what you get for trying to learn multiple languages...
+  bucket = var.bucketName # "your-bucket-name" 
 }
 
+# TODO: Ditch the example names.
 resource "aws_s3_bucket_ownership_controls" "example" { # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_ownership_controls
   bucket = aws_s3_bucket.resumeWebsiteBucket.id
 
