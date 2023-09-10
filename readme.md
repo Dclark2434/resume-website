@@ -60,7 +60,7 @@ domain_name = "this should be your domain name without www. (example.com)"
 terraform init
 ```
 
-7. **Create a plan**:
+7. **Review plan**:
 ```
 terraform plan
 ```
