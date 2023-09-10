@@ -75,11 +75,11 @@ terraform apply
 Once the deployment is successful, you **should** be able to access your website.
 
 10. **Iterate**  
-
+```
+Iterate  
+Iterate  
 Iterate
-Iterate
-Iterate
-
+```
 ## Cleanup
 
 To destroy the resources created by Terraform:
