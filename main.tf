@@ -184,13 +184,13 @@ resource "aws_cloudfront_distribution" "s3_distribution" { # https://registry.te
     response_page_path    = "/error.html"
   }
 
-  default_cache_behavior {
+  default_cache_behavior { # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudfront_distribution#default_cache_behavior
     allowed_methods        = ["GET", "HEAD"]
     cached_methods         = ["GET", "HEAD"]
     target_origin_id       = "www.${var.domain_name}.s3-website-us-east-1.amazonaws.com"
     compress               = true
-    default_ttl            = 0
-    max_ttl                = 0
+    default_ttl            = 3600
+    max_ttl                = 86400
     viewer_protocol_policy = "redirect-to-https"
     min_ttl                = 0
     forwarded_values {
