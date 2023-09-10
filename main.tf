@@ -114,6 +114,30 @@ resource "aws_route53_record" "cert_validation" {
   ttl     = "300"
 }
 
+resource "aws_route53_record" "root_domain_alias" {
+  zone_id = aws_route53_zone.primary.zone_id
+  name    = var.domain_name
+  type    = "A"
+
+  alias {
+    name                   = aws_cloudfront_distribution.s3_distribution.domain_name
+    zone_id                = aws_cloudfront_distribution.s3_distribution.hosted_zone_id
+    evaluate_target_health = false
+  }
+}
+
+resource "aws_route53_record" "www_domain_alias" {
+  zone_id = aws_route53_zone.primary.zone_id
+  name    = "www.${var.domain_name}"
+  type    = "A"
+
+  alias {
+    name                   = aws_cloudfront_distribution.s3_distribution.domain_name
+    zone_id                = aws_cloudfront_distribution.s3_distribution.hosted_zone_id
+    evaluate_target_health = false
+  }
+}
+
 
 resource "aws_acm_certificate_validation" "cert" { # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/acm_certificate_validation
   certificate_arn         = aws_acm_certificate.cert.arn
