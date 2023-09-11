@@ -107,7 +107,7 @@ resource "aws_acm_certificate" "cert" { # https://registry.terraform.io/provider
 }
 
 resource "aws_route53_record" "cert_validation" {
-  count   = 2
+  count   = 2 # TODO: change to for_each probably.
   zone_id = aws_route53_zone.primary.zone_id
 
   name    = tolist(aws_acm_certificate.cert.domain_validation_options)[count.index].resource_record_name
