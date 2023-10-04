@@ -214,5 +214,4 @@ resource "aws_cloudfront_distribution" "s3_distribution" { # https://registry.te
       restriction_type = "none"
     }
   }
-
 }
