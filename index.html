@@ -14,18 +14,18 @@
         <main>
     <header>
         <h1>Dustin Michael Clark</h1>
-        <p>San Antonio, TX • <a href="https://linkedin.com/in/dclark2434">linkedin.com/in/dclark2434</a> • <a href="https://www.dustinshapesclouds.com">www.dustinshapesclouds.com</a></p> 
+        <p>San Antonio, TX • <a href="https://linkedin.com/in/dclark2434" target="_blank">linkedin.com/in/dclark2434</a> • <a href="https://www.dustinshapesclouds.com">www.dustinshapesclouds.com</a></p> 
     </header>
 
     <section class="centered-section">
         <h2>Learning-Focused Cloud Engineer</h2>
-        <p>Infrastructure Engineer • Cloud Support Engineer • Junior DevOps Engineer</p>
+        <p>Systems Engineer • Cloud Support Engineer • Junior DevOps Engineer</p>
         <p>Cloud Infrastructure • Support & Incident Response • Cloud Operations • Infrastructure as Code</p>
     </section>
 
     <section>
         <h2>Certifications & Technologies</h2>
-        <b><p>AWS CCP; Terraform Associate; CompTIA Security+, Network+, A+; LPI Linux Essentials; ITIL</p></b>
+        <p><strong>AWS CCP; Terraform Associate; CompTIA Security+, Network+, A+; LPI Linux Essentials; ITIL</strong></p>
         <p>Technologies: AWS (EC2, S3, IAM, VPC, CW), Terraform, Python, Git (GitHub, GitLab), Linux, Bash</p>
     </section>
 
@@ -107,6 +107,11 @@
                 <li>Implemented Amazon CloudFront as a CDN to accelerate content delivery and added SSL/TLS for enhanced security.</li>
                 <li>Configured custom domain integration for a personalized website URL, leveraging Route 53 for DNS management.</li>
             </ul>
+        <p><strong>Visitor Counter Integration:</strong></p>
+            <ul>
+                <li>Integrated a Python-based AWS Lambda function that updates a DynamoDB database with the number of views each time the page is loaded, providing real-time visitor statistics.</li>
+                <li>Utilized an AWS Lambda function URL in the website javascript code to call the function and update the visitor count.</li>
+            </ul>    
         <p><strong>Continuous Deployment:</strong></p>
             <ul>
                 <li>Automated the deployment pipeline to streamline updates and maintain site consistency.</li>
@@ -115,23 +120,21 @@
         <p><strong>Logging & Monitoring:</strong></p>
             <ul>
                 <li>Analyzed CloudFront access logs to troubleshoot and rectify HTTP 403 errors.</li>
+                <li>Utilized CloudWatch logs to troubleshoot permissions issues with lambda functions not being called.</li>
                 <li>Enhanced user experience by ensuring rapid content delivery and site uptime.</li>
             </ul>
         <p><strong>Best Practices & Optimization:</strong></p>
             <ul>
                 <li>Incorporated infrastructure best practices, including the use of alternate domain names in CloudFront and adjusting S3 bucket policies to align with CloudFront distributions.</li>
             </ul>
+
             <h4>Ongoing Enhancements & Future Directions:</h4>
-            <p><strong>Visitor Counter Integration:</strong></p>
-            <ul>
-                <li>Currently working on implementing a dynamic visitor counter to the website, leveraging AWS Lambda for serverless computing and DynamoDB for scalable and low-latency data storage.</li>
-            </ul>
-        
+
             <p><strong>Efficient Deployment Pipeline:</strong></p>
             <ul>
-                <li>In pursuit of streamlined and automated deployments, transitioning to GitLab CI/CD.</li>
+                <li>In pursuit of streamlined and automated deployments, the project will soon be using GitHub Actions.</li>
                 <ul>
-                    <li>Utilizing Python scripts to convert .docx resume to HTML.</li>
+                    <li>GitHub Actions will be used to trigger a Terraform deployment when changes are pushed to the GitHub repository.</li>
                     <li>Automating the upload process of static assets to Amazon S3.</li>
                     <li>Implementing automatic CloudFront invalidation to ensure content freshness and minimize the time between content updates on the website.</li>
                 </ul>
@@ -141,7 +144,7 @@
     <footer>
         <p>Thank you for visiting my resume. Visitor count: <span id="visitorCount">Loading...</span></p>
     </footer>
-    
+
     <script src="index.js"></script>
 </main>
 </div>
