@@ -53,7 +53,7 @@ resource "aws_s3_object" "index-css" {
   depends_on = [aws_s3_bucket_acl.example]
 }
 
-resource "aws_s3_object" "index.js" { 
+resource "aws_s3_object" "index-js" { 
   bucket       = aws_s3_bucket.resumeWebsiteBucket.id
   key          = "index.js"
   source       = "index.js"
