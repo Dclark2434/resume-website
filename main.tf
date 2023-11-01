@@ -53,6 +53,17 @@ resource "aws_s3_object" "index-css" {
   depends_on = [aws_s3_bucket_acl.example]
 }
 
+resource "aws_s3_object" "index.js" { 
+  bucket       = aws_s3_bucket.resumeWebsiteBucket.id
+  key          = "index.js"
+  source       = "index.js"
+  acl          = "public-read"
+  etag         = filemd5("index.js") # Used to force a redeploy of the file if it changes (https://www.terraform.io/docs/language/functions/filemd5.html)
+  content_type = "text/js"
+
+  depends_on = [aws_s3_bucket_acl.example]
+}
+
 resource "aws_s3_object" "error" {
   bucket       = aws_s3_bucket.resumeWebsiteBucket.id
   key          = "error.html"
